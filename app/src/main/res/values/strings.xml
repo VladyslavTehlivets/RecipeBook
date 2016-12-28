@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">Recipe</string>
+    <string name="reciple_book">Recipe book</string>
+    <string name="start">Start</string>
+    <string name="chooseOption">Choose option</string>
+    <string name="exit">Exit</string>
+    <string name="areYouSure">Are you sure?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="enter_product_name">Enter Product name</string>
+    <string name="add">Add</string>
+    <string name="product_added">Succesfuly added</string>
+    <string name="database">database.db</string>
+    <string name="deleting_item">Delete Product</string>
+    <string name="remove">Remove</string>
+    <string name="if_remove">Do you want\nto remove?</string>
+    <string name="set_timer">Set timer</string>
+    <string name="remained">Remained</string>
+    <string name="_0_60_min">(0-60) min</string>
+    <string name="stop">Stop</string>
+    <string name="stoptimer">StopTimer</string>
+    <string name="RecipeImages">MyImages</string>
+    <string name="enter_quantity">enter quantity</string>
+    <string name="enter_title">enter title</string>
+    <string name="change_foto">Change foto</string>
+    <string name="add_product">Add product</string>
+    <string name="foto">Foto</string>
+    <string name="delete_recipe">delete recipe</string>
+    <string-array name="options">
+        <item>Add recipe</item>
+        <item>Remove recipe</item>
+        <item>Cooking</item>
+        <item>Show recipes</item>
+        <item>Add Product</item>
+        <item>Remove Product</item>
+    </string-array>
+</resources>

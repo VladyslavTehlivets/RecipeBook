@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/topMargin"
+        android:text="@string/set_timer"
+        android:textAlignment="center"
+        android:textSize="@dimen/titleText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp"
+        android:src="@android:drawable/ic_lock_idle_alarm" />
+
+    <EditText
+        android:id="@+id/timerEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/topMargin"
+        android:hint="@string/_0_60_min"
+        android:textAlignment="center"
+        android:textSize="@dimen/titleText" />
+        <!--android:inputType="number"-->
+
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timerEdit"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/leftMargin"
+        android:layout_marginRight="@dimen/rightMargin">
+
+        <Button
+            android:id="@+id/buttonStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/bottomMargin"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onClickStart"
+            android:text="@string/start" />
+
+
+        <Button
+            android:id="@+id/buttonStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/bottomMargin"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onClickStop"
+            android:text="@string/stop" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/remained_text_view_sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonsLayout"
+        android:layout_centerHorizontal="true"
+        android:text="00:00"
+        android:textSize="@dimen/titleText" />
+
+    <Button
+        android:id="@+id/timer_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/remained_text_view_sec"
+        android:layout_centerHorizontal="true"
+        android:onClick="stopSound"
+        android:text="@string/stoptimer"
+        android:visibility="invisible" />
+
+</RelativeLayout>

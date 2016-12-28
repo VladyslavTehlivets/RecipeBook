@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">Рецепт</string>
+    <string name="reciple_book">Книга рецептів</string>
+    <string name="start">Розпочати</string>
+    <string name="chooseOption">Вибери опцію</string>
+    <string name="exit">Вийти</string>
+    <string name="areYouSure">Ви впевнені , що хочете вийти?</string>
+    <string name="yes">Так</string>
+    <string name="no">Ні</string>
+    <string name="enter_product_name">Подай назву продукту</string>
+    <string name="add">Додай</string>
+    <string name="product_added">Продукт доданий</string>
+    <string name="database">базаданих.db</string>
+    <string name="deleting_item">Видали продукт</string>
+    <string name="remove">Видалити</string>
+    <string name="if_remove">Хочеш\n видалити?</string>
+    <string name="set_timer">Встанови таймер</string>
+    <string name="remained">Залишилось</string>
+    <string name="_0_60_min">(0-60) хв</string>
+    <string name="stop">Stop</string>
+    <string name="stoptimer">StopTimer</string>
+    <string name="RecipeImages">МоїКартинки</string>
+    <string name="enter_quantity">введи кількість</string>
+    <string name="enter_title">впиши назву</string>
+    <string name="change_foto">Зміни зображення</string>
+    <string name="add_product">Додай продукт</string>
+    <string-array name="options">
+        <item>Додай рецепт</item>
+        <item>Усунь рецепт</item>
+        <item>Готуй</item>
+        <item>Покажи рецепти</item>
+        <item>Додай продукт</item>
+        <item>Усунь продукт</item>
+    </string-array>
+    <string name="foto">Фото</string>
+    <string name="delete_recipe">видали рецепт</string>
+</resources>

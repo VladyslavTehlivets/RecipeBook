@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">Przepis</string>
+    <string name="reciple_book">Książka kucharska</string>
+    <string name="start">Zacznij</string>
+    <string name="chooseOption">Dokonaj wyboru</string>
+    <string name="exit">Wyjście</string>
+    <string name="areYouSure">Czy na pewno?</string>
+    <string name="yes">Tak</string>
+    <string name="no">Nie</string>
+    <string name="enter_product_name">Wpisz nazwe productu</string>
+    <string name="add">Dodaj</string>
+    <string name="product_added">Dodane </string>
+    <string name="database">bazadanych.db</string>
+    <string name="deleting_item">Usuń produkt</string>
+    <string name="remove">Usuń</string>
+    <string name="if_remove">Chcesz\n usunąć?</string>
+    <string name="set_timer">Ustaw timer</string>
+    <string name="remained">Pozostało</string>
+    <string name="_0_60_min">(0-60) min</string>
+    <string name="stop">Stop</string>
+    <string name="stoptimer">StopTimer</string>
+    <string name="RecipeImages">MojeZdjecia</string>
+    <string name="enter_quantity">wprowadż ilość</string>
+    <string name="enter_title">wpisz nazwę</string>
+    <string name="change_foto">Zmień zdjęcie</string>
+    <string name="add_product">Dodaj produkt</string>
+    <string-array name="options">
+        <item>Dodaj recepte</item>
+        <item>Gotuj</item>
+        <item>Usuń recepte</item>
+        <item>Pokaż przepisy</item>
+        <item>Dodaj product</item>
+        <item>Usuń product</item>
+    </string-array>
+    <string name="foto">Zdjęcie</string>
+    <string name="delete_recipe">usuń  pzepis</string>
+</resources>
