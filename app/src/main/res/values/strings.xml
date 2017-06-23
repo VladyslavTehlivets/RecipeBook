@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
-    <string name="app_name">Recipe</string>
+    <string name="app_name">Recipe book</string>
     <string name="reciple_book">Recipe book</string>
     <string name="start">Start</string>
     <string name="chooseOption">Choose option</string>
@@ -27,6 +27,19 @@
     <string name="add_product">Add product</string>
     <string name="foto">Foto</string>
     <string name="delete_recipe">delete recipe</string>
+    <string name="_00_00">00:00</string>
+    <string name="add_tag">Add #tag</string>
+    <string name="recipeName">Add Recipe Name</string>
+    <string name="Submit">Submit</string>
+    <string name="AddPicture">Add Picture</string>
+    <string name="short_description">Short Description</string>
+    <string name="recipe_book">Recipe Book</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="select_recipe_products">Select recipe products</string>
+    <string name="select_for_shopping">Select recipes for shopping</string>
+
     <string-array name="options">
         <item>Add recipe</item>
         <item>Remove recipe</item>

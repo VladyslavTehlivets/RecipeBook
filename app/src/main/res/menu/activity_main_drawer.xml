@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/show_recipes"
+            android:title="Show Recipes" />
+            <!--android:icon="@drawable/ic_menu_camera"-->
+        <item
+            android:id="@+id/timer"
+            android:title="Timer" />
+        <item
+            android:id="@+id/product_shoping"
+            android:title="Product shoping" />
+    </group>
+
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/exit"
+                android:title="@string/exit" />
+        </menu>
+    </item>
+
+</menu>

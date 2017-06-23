@@ -13,10 +13,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/**
- * Created by Tehlivets on 29/06/16.
- */
 public class Cook extends Activity {
+
     private SensorManager mSensorManager;
     private ShakeEventListener mSensorListener;
     private TextView remainedSec;
@@ -34,6 +32,7 @@ public class Cook extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cook);
+
         remainedSec = (TextView) findViewById(R.id.remained_text_view_sec);
         getMinuts = (EditText) findViewById(R.id.timerEdit);
         start = (Button) findViewById(R.id.buttonStart);
@@ -43,7 +42,6 @@ public class Cook extends Activity {
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mSensorListener = new ShakeEventListener();
         setShakeListener();
-
     }
 
     private void setShakeListener() {
@@ -88,6 +86,9 @@ public class Cook extends Activity {
         timer.cancel();
     }
 
+    public void closeTimer(View view){
+        this.finish();
+    }
 
     @Override
     public void onBackPressed() {

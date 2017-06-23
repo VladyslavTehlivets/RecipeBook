@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
-    <string name="app_name">Рецепт</string>
+    <string name="app_name">Книга рецептів</string>
     <string name="reciple_book">Книга рецептів</string>
     <string name="start">Розпочати</string>
     <string name="chooseOption">Вибери опцію</string>
@@ -35,4 +35,15 @@
     </string-array>
     <string name="foto">Фото</string>
     <string name="delete_recipe">видали рецепт</string>
+    <string name="_00_00">00:00</string>
+    <string name="add_tag">Додай #тег</string>
+    <string name="recipeName">Додай назву рецепту</string>
+    <string name="Submit">Зберегти</string>
+    <string name="AddPicture">Додай картинку</string>
+    <string name="short_description">Короткий опис</string>
+    <string name="recipe_book">Книга рецептів</string>
+    <string name="navigation_drawer_close">Закрити панель навігації</string>
+    <string name="navigation_drawer_open">Відкрити панель навігації</string>
+    <string name="select_recipe_products">Select recipe products</string>
+    <string name="select_for_shopping">Select recipes for shopping</string>
 </resources>
