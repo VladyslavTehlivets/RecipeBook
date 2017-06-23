@@ -14,7 +14,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,32 +23,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Start"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.START" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Show_recipes"
-            android:screenOrientation="portrait"/>
-        <activity
             android:name=".Cook"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".RemoveRecipe"
             android:screenOrientation="portrait" />
         <activity
             android:name=".NewRecipe"
             android:configChanges="orientation|screenLayout|keyboardHidden|keyboard|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Shoping"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DeleteProduct"
+            android:name=".Show_recipes1"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AddProduct"
+            android:name=".RecipeView"
             android:screenOrientation="portrait" />
     </application>
 

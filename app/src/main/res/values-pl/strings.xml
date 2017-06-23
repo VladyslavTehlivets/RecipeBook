@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
-    <string name="app_name">Przepis</string>
+    <string name="app_name">Książka przepisów</string>
     <string name="reciple_book">Książka kucharska</string>
     <string name="start">Zacznij</string>
     <string name="chooseOption">Dokonaj wyboru</string>
@@ -35,4 +35,15 @@
     </string-array>
     <string name="foto">Zdjęcie</string>
     <string name="delete_recipe">usuń  pzepis</string>
+    <string name="_00_00">00:00</string>
+    <string name="add_tag">Dodaj #tag</string>
+    <string name="recipeName">Dodaj Nazwe Przepisu</string>
+    <string name="Submit">Zapisz</string>
+    <string name="AddPicture">Dodaj zdjęcie</string>
+    <string name="short_description">Krótki Opis</string>
+    <string name="recipe_book">Księga przepisów</string>
+    <string name="navigation_drawer_close">Zamknij panel nawigacji</string>
+    <string name="navigation_drawer_open">Otwórz panel nawigacji</string>
+    <string name="select_recipe_products">Select recipe products</string>
+    <string name="select_for_shopping">Select recipes for shopping</string>
 </resources>

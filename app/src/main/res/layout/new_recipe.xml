@@ -1,96 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/recipe_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/topMargin"
-        android:hint="@string/enter_title"
-        android:textAlignment="center"
-        android:textSize="@dimen/titleText" />
-
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarRecipe"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/leftMargin"
-        android:layout_marginRight="@dimen/rightMargin"
-        android:layout_marginTop="@dimen/topMargin">
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/add_button_color"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
 
-        <Button
-            android:id="@+id/buttonChangeFoto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@null"
-            android:onClick="changeFoto"
-            android:text="@string/change_foto"
-            android:visibility="visible" />
-
-        <Button
-            android:id="@+id/addFoto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@null"
-            android:onClick="makeFoto"
-            android:text="@string/foto"
-            android:visibility="visible" />
-
-        <Button
-            android:id="@+id/addRecipeButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@null"
-            android:clickable="false"
-            android:onClick="addRecipe"
-            android:text="@string/add"
-            android:visibility="visible" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/product_and_quantity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/leftMargin"
-        android:layout_marginRight="@dimen/rightMargin"
-        android:layout_marginTop="50dp"
-        android:orientation="horizontal">
-
-        <Spinner
-            android:id="@+id/spinner"
+        <ImageButton
+            android:id="@+id/newRecipeBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/rightMargin"
-            android:layout_weight="1"
-            android:scrollbarSize="@dimen/titleText" />
+            android:background="@null"
+            android:onClick="closeActivity"
+            android:src="@mipmap/back" />
 
-        <EditText
-            android:id="@+id/recipe_quantity_edit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_weight="1"
-            android:hint="@string/enter_quantity"
-            android:textAlignment="center" />
-    </LinearLayout>
+    </android.support.v7.widget.Toolbar>
 
-    <Button
-        android:id="@+id/add_product"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="@dimen/leftMargin"
-        android:layout_marginRight="@dimen/rightMargin"
-        android:clickable="false"
-        android:onClick="addProduct"
-        android:text="@string/add_product" />
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/recipeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/topMargin"
+                    android:hint="@string/recipeName"
+                    android:inputType="text" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/recipePhotoText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/AddPicture"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/recipeUpload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:onClick="addPhoto"
+                        android:src="@mipmap/upload" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/leftMargin"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/addTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/add_tag"
+                        android:inputType="text"
+                        android:textAlignment="center" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:onClick="addTag"
+                        android:src="@mipmap/ok" />
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="@dimen/leftMargin"
+                    android:layout_marginRight="@dimen/rightMargin" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/rightMargin"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/addProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/add_product"
+                        android:inputType="text" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:onClick="addProduct"
+                        android:src="@mipmap/ok" />
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/products"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="@dimen/leftMargin"
+                    android:layout_marginRight="@dimen/rightMargin" />
+
+                <EditText
+                    android:id="@+id/recipeDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="@string/short_description" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="6">
+
+                <ListView
+                    android:id="@+id/steps"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="@dimen/leftMargin"
+                    android:layout_marginRight="@dimen/rightMargin"
+                    android:layout_weight="4" />
+
+                <Button
+                    android:id="@+id/addStep"
+                    style="@android:style/Widget.Holo.Light.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/leftMargin"
+                    android:layout_marginRight="@dimen/rightMargin"
+                    android:onClick="addStep"
+                    android:text="Add Step"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/submit"
+                    style="@android:style/Widget.Holo.Light.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="onSubmit"
+                    android:layout_marginLeft="@dimen/leftMargin"
+                    android:layout_marginRight="@dimen/rightMargin"
+                    android:enabled="true"
+                    android:text="@string/Submit"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

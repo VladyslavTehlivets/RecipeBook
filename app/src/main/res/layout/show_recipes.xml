@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.tehlivets.myapplication.Show_recipes1"
+    tools:showIn="@layout/recykle_recept">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottomMargin"
+        android:layout_marginLeft="@dimen/leftMargin"
+        android:layout_marginRight="@dimen/rightMargin"
+        android:layout_marginTop="@dimen/topMargin"
+        android:background="@null"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>

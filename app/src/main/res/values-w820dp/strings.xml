@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<resources></resources>
+<resources>
+    <string name="_00_00">00:00</string>
+    <string name="add_tag">Add #tag</string>
+    <string name="recipeName">Add Recipe Name</string>
+    <string name="Submit">Submit</string>
+    <string name="AddPicture">Add Picture</string>
+    <string name="short_description">Short Description</string>
+</resources>

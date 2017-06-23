@@ -3,9 +3,13 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="titleText">27sp</dimen>
+    <dimen name="contentText">24sp</dimen>
     <dimen name="topMargin">15dp</dimen>
     <dimen name="bottomMargin">15dp</dimen>
     <dimen name="rightMargin">30dp</dimen>
     <dimen name="leftMargin">30dp</dimen>
     <dimen name="deleted_text">22sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
 </resources>

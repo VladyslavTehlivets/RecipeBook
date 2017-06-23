@@ -5,9 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-/**
- * Created by Tehlivets on 30/06/16.
- */
 public class DbAdapter {
 
     private SQLiteDatabase db;
@@ -42,6 +39,10 @@ public class DbAdapter {
 
     public long insert(String table, ContentValues cv) {
         return db.insert(table, null, cv);
+    }
+
+    public void update(String table, ContentValues cv, String where){
+        db.update(table,cv,where,null);
     }
 
     public Cursor getData(String table, String[] columns) {

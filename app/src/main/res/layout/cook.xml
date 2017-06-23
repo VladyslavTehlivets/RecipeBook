@@ -1,92 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    android:orientation="vertical"
-    android:weightSum="1">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView3"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarTimer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/topMargin"
-        android:text="@string/set_timer"
-        android:textAlignment="center"
-        android:textSize="@dimen/titleText" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/add_button_color"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp"
-        android:src="@android:drawable/ic_lock_idle_alarm" />
-
-    <EditText
-        android:id="@+id/timerEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imageView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/topMargin"
-        android:hint="@string/_0_60_min"
-        android:textAlignment="center"
-        android:textSize="@dimen/titleText" />
-        <!--android:inputType="number"-->
+        <ImageButton
+            android:id="@+id/timerBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:onClick="closeTimer"
+            android:src="@mipmap/back" />
+    </android.support.v7.widget.Toolbar>
 
 
     <LinearLayout
-        android:id="@+id/buttonsLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/timerEdit"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/leftMargin"
-        android:layout_marginRight="@dimen/rightMargin">
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/buttonStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/bottomMargin"
-            android:layout_weight="1"
-            android:background="@null"
-            android:onClick="onClickStart"
-            android:text="@string/start" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
+            <EditText
+                android:id="@+id/timerEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/_0_60_min"
+                android:textAlignment="center"
+                android:textSize="@dimen/titleText" />
 
-        <Button
-            android:id="@+id/buttonStop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/bottomMargin"
-            android:layout_weight="1"
-            android:background="@null"
-            android:onClick="onClickStop"
-            android:text="@string/stop" />
-
+            <TextView
+                android:id="@+id/remained_text_view_sec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="00:00"
+                android:textAlignment="center"
+                android:textSize="@dimen/titleText" />
+        </LinearLayout>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/remained_text_view_sec"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonsLayout"
-        android:layout_centerHorizontal="true"
-        android:text="00:00"
-        android:textSize="@dimen/titleText" />
 
-    <Button
-        android:id="@+id/timer_stop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/remained_text_view_sec"
-        android:layout_centerHorizontal="true"
-        android:onClick="stopSound"
-        android:text="@string/stoptimer"
-        android:visibility="invisible" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity=""
+            android:src="@drawable/timer" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/leftMargin"
+            android:layout_marginRight="@dimen/rightMargin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonStart"
+                style="@android:style/Widget.Holo.Light.Button.Inset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickStart"
+                android:text="@string/start" />
+
+            <Button
+                android:id="@+id/timer_stop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="stopSound"
+                android:text="@string/stoptimer"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/buttonStop"
+                style="@android:style/Widget.Holo.Light.Button.Inset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickStop"
+                android:text="@string/stop" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
